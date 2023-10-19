@@ -58,3 +58,14 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   });
 });
+
+document.getElementById("registrationForm").addEventListener("submit", (event) => {
+  const passwordInput = document.getElementById("password");
+  const confirmPasswordInput = document.getElementById("confirmPassword");
+  const errorDiv = document.getElementById("errorDiv");
+  if (passwordInput.value !== confirmPasswordInput.value) {
+      event.preventDefault();
+      errorDiv.style.display = "block";
+      confirmPasswordInput.setCustomValidity("Las contraseñas no coinciden");
+      
+  }});
