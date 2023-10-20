@@ -67,5 +67,4 @@ document.getElementById("registrationForm").addEventListener("submit", (event) =
       event.preventDefault();
       errorDiv.style.display = "block";
       confirmPasswordInput.setCustomValidity("Las contraseñas no coinciden");
-      
   }});
